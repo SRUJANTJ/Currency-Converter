@@ -18,16 +18,19 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+background-image: url('/Currency.jpg');
+background-size: cover;
+background-position: center;}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+select.w-full.p-2.border.border-gray-300.rounded-md.shadow-sm.focus\:outline-none.focus\:ring-2.focus\:ring-green-500 {
+  background: linear-gradient(45deg, #a5ea30, #197115);
+}
+span.block.text-lg.font-semibold.mb-2,label.block.text-lg.font-semibold.mb-2{
+  background: linear-gradient(45deg, #e7781e, transparent);
+
 }
