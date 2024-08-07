@@ -31,7 +31,7 @@ const CurrencyCalculator = () => {
   return (
 <div className='text-black  p-6 m-[15vh] shadow-lg flex flex-col items-center space-y-4  justify-center'>
   <div className='w-full max-w-sm'>
-    <span className='block text-lg font-semibold mb-2'>Base Currency:</span>
+    <span className='block text-lg font-semibold mb-2'>From:</span>
     <select
       onChange={(e) => setBaseCurrency(e.target.value)}
       value={baseCurrency}
@@ -45,7 +45,7 @@ const CurrencyCalculator = () => {
     </select>
   </div>
   <div className='w-full max-w-sm'>
-    <label className='block text-lg font-semibold mb-2'>Target Currency:</label>
+    <label className='block text-lg font-semibold mb-2'>To:</label>
     <select
       onChange={(e) => setTargetCurrency(e.target.value)}
       value={targetCurrency}
