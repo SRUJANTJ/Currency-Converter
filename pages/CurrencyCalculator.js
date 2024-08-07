@@ -29,13 +29,15 @@ const CurrencyCalculator = () => {
   }, [amount, targetCurrency, currencies]);
 
   return (
-<div className='text-black  p-6 m-[15vh] shadow-lg flex flex-col items-center space-y-4  justify-center'>
+    <div class="container">
+
+<div className=' p-6  shadow-lg rounded-xl flex flex-col items-center space-y-4'>
   <div className='w-full max-w-sm'>
-    <span className='block text-lg font-semibold mb-2'>From:</span>
+    <label className='block text-lg font-semibold mb-2 text-gray-800'>From:</label>
     <select
       onChange={(e) => setBaseCurrency(e.target.value)}
       value={baseCurrency}
-      className='w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500'
+      className='w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150 ease-in-out'
     >
       {Object.keys(currencies).map((currency) => (
         <option key={currency} value={currency}>
@@ -45,11 +47,11 @@ const CurrencyCalculator = () => {
     </select>
   </div>
   <div className='w-full max-w-sm'>
-    <label className='block text-lg font-semibold mb-2'>To:</label>
+    <label className='block text-lg font-semibold mb-2 text-gray-800'>To:</label>
     <select
       onChange={(e) => setTargetCurrency(e.target.value)}
       value={targetCurrency}
-      className='w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500'
+      className='w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150 ease-in-out'
     >
       {Object.keys(currencies).map((currency) => (
         <option key={currency} value={currency}>
@@ -59,21 +61,22 @@ const CurrencyCalculator = () => {
     </select>
   </div>
   <div className='w-full max-w-sm'>
-    <label className='block text-lg font-semibold mb-2'>Amount:</label>
+    <label className='block text-lg font-semibold mb-2 text-gray-800'>Amount:</label>
     <input
       type='number'
       value={amount}
       onChange={(e) => setAmount(e.target.value)}
-      className='w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500'
+      className='w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150 ease-in-out'
     />
   </div>
-  <div className='w-full max-w-sm'>
-    <h2 className='text-xl font-bold bg-amber-400'>
+  <div className='w-full max-w-sm result'>
+    <h2 className='text-xl font-bold text-gray-800result p-3 rounded-lg shadow-md'>
       Result: {result ? `${amount} ${baseCurrency} = ${result} ${targetCurrency}` : 'Calculating...'}
     </h2>
   </div>
 </div>
 
+</div>
   );
 };
 
