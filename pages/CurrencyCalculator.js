@@ -29,7 +29,7 @@ const CurrencyCalculator = () => {
   }, [amount, targetCurrency, currencies]);
 
   return (
-<div className='text-black  p-6 m-48 shadow-lg flex flex-col items-center space-y-4  justify-center'>
+<div className='text-black  p-6 m-[15vh] shadow-lg flex flex-col items-center space-y-4  justify-center'>
   <div className='w-full max-w-sm'>
     <span className='block text-lg font-semibold mb-2'>Base Currency:</span>
     <select
