@@ -37,7 +37,7 @@ const CurrencyCalculator = () => {
     <select
       onChange={(e) => setBaseCurrency(e.target.value)}
       value={baseCurrency}
-      className='w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150 ease-in-out'
+      className='w-full p-3 border border-gray-300 text-black rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150 ease-in-out'
     >
       {Object.keys(currencies).map((currency) => (
         <option key={currency} value={currency}>
@@ -51,7 +51,7 @@ const CurrencyCalculator = () => {
     <select
       onChange={(e) => setTargetCurrency(e.target.value)}
       value={targetCurrency}
-      className='w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150 ease-in-out'
+      className='w-full p-3 border border-gray-300 rounded-lg  text-black shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150 ease-in-out'
     >
       {Object.keys(currencies).map((currency) => (
         <option key={currency} value={currency}>
@@ -66,7 +66,7 @@ const CurrencyCalculator = () => {
       type='number'
       value={amount}
       onChange={(e) => setAmount(e.target.value)}
-      className='w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150 ease-in-out'
+      className='w-full p-3 border border-gray-300 rounded-lg shadow-md  text-black focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150 ease-in-out'
     />
   </div>
   <div className='w-full max-w-sm result'>
